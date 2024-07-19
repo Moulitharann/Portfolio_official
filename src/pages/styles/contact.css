@@ -1,0 +1,124 @@
+.contact-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.contact-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+}
+
+.contact-subtitle {
+	width: 100% !important;
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 120px;
+}
+
+.socials-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: baseline; /* Align items to the top */
+	padding: 50px;
+}
+
+.contact-socials {
+	display: flex;
+	flex-direction: column; /* Change to column to stack icons vertically */
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.contact-social {
+	display: flex;
+	align-items: center; /* Center align items within each social */
+	background: #f0f2f5;
+	padding: 20px;
+	margin-bottom: 10px; /* Add margin for spacing between socials */
+}
+
+.contact-form {
+	background: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Ensure form takes full width of the container */
+	max-width: 600px; /* Optional: Set max width for form */
+}
+
+.contact-form .form-group {
+	margin-bottom: 15px;
+}
+
+.contact-form label {
+	font-weight: bold;
+	color: #333;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
+	color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+.contact-form textarea {
+	resize: vertical;
+	height: 120px;
+}
+
+.contact-form button {
+	background: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.contact-form button:hover {
+	background: #0056b3;
+}
+
+/* Additional responsive styles for better mobile support */
+@media (max-width: 768px) {
+	.socials-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.contact-socials {
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.contact-form {
+		width: 100%;
+	}
+}
+.heading{
+	font-family: var(--secondary-font);
+}
