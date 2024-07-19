@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faFile } from '@fortawesome/free-solid-svg-icons';
 import Resume from './Resume.png';
 import Resumepdf from './styles/Resume.pdf';
 import "./styles/works.css";

@@ -5,7 +5,12 @@ import ReactGA from "react-ga4";
 import Homepage from "./pages/homepage";
 import About from "./pages/about";
 import Projects from "./pages/projects";
+<<<<<<< HEAD
 
+=======
+import Articles from "./pages/articles";
+import ReadArticle from "./pages/readArticle";
+>>>>>>> f81aa5e (updated)
 import Contact from "./pages/contact";
 import Notfound from "./pages/404";
 
