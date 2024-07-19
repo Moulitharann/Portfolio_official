@@ -33,9 +33,9 @@ const Homepage = () => {
 	  }, 1500);
   
 	  return () => clearTimeout(timeout);
-	}, []);
+	}, [initialTitle, targetTitle]);
   
-	const updateTitle = (initial, target) => {
+	const updateTitle = ( target) => {
 	 // const initialWords = initial.split(" ");
 	  const targetWords = target.split(" ");
 	  
