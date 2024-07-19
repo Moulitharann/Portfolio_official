@@ -6,20 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
 	faGithub,
-	faleetcode,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
+
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
 
@@ -39,8 +37,8 @@ const Homepage = () => {
 	  return () => clearTimeout(timeout);
 	}, []);
   
-	const updateTitle = (initial, target) => {
-	 // const initialWords = initial.split(" ");
+	const updateTitle = ( target) => {
+
 	  const targetWords = target.split(" ");
 	  
 	  let currentWordIndex = 1; // Start at index 1 to update "Software Developer"
