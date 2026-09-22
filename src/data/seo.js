@@ -2,37 +2,61 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Moulitharan M - Backend Software Engineer with 1+ year of experience designing and operating REST APIs and high-volume data services on ASP.NET Core, SQL Server, and Microsoft Azure.",
+		keywords: [
+			"Moulitharan",
+			"Moulitharan M",
+			"Backend Software Engineer",
+			".NET Developer",
+			"ASP.NET Core",
+			"FastAPI",
+			"Python",
+			"React",
+		],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"About Moulitharan M - .NET Developer at Impiger Technologies, experienced in ASP.NET Core, SQL Server, Azure, AI Computer Vision, and full-stack web applications.",
+		keywords: [
+			"Moulitharan M",
+			"Backend Developer",
+			"Impiger Technologies",
+			"Coreverse",
+			"Portfolio",
+		],
 	},
 
 	{
 		page: "articles",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Chronological collection of my technical articles, software engineering insights, and backend architecture discussions.",
+		keywords: ["Moulitharan", "Moulitharan M", "Tech Articles", "Backend Engineering"],
 	},
 
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Moulitharan", "Moulitharan", "Moulitharan M"],
+			"Explore projects by Moulitharan M including HRMS AI & ANPR Attendance System, Automated LinkedIn Post Generator, A3 Clothing Dashboard, and Instant Chat Application.",
+		keywords: [
+			"HRMS AI",
+			"ANPR",
+			"FastAPI",
+			"Gemini AI",
+			"Moulitharan M Projects",
+			"MERN",
+			"ASP.NET Core",
+		],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Moulitharan", "Moulitharan M", ],
+			"Get in touch with Moulitharan M for backend engineering opportunities, full-stack development, or technical collaboration.",
+		keywords: ["Contact Moulitharan", "Hire Backend Engineer", "Moulitharan M"],
 	},
 ];
 
 export default SEO;
+

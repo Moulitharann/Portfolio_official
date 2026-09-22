@@ -19,48 +19,42 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 import "./styles/homepage.css";
 
+const ROLES = [
+	"BACKEND SOFTWARE ENGINEER",
+	".NET CORE & AZURE DEVELOPER",
+	"AI & COMPUTER VISION ENGINEER",
+	"FULL-STACK DEVELOPER",
+];
+
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
-	const initialTitle = (INFO.homepage.title)
-	const targetTitle = " WEB DEVELOPER..";
-	const [title, setTitle] = useState(initialTitle);
-  
+	const [roleIndex, setRoleIndex] = useState(0);
+	const [displayText, setDisplayText] = useState("");
+	const [isDeleting, setIsDeleting] = useState(false);
+
 	useEffect(() => {
-	  const timeout = setTimeout(() => {
-		updateTitle(initialTitle, targetTitle);
-	  }, 1500);
-  
-	  return () => clearTimeout(timeout);
-	}, [initialTitle, targetTitle]);
-  
-	const updateTitle = ( target) => {
-	 // const initialWords = initial.split(" ");
-	  const targetWords = target.split(" ");
-	  
-	  let currentWordIndex = 1; // Start at index 1 to update "Software Developer"
-	  let charIndex = 0;
-	  let currentTitle = targetWords.slice(0, currentWordIndex).join(" ") + " ";
-  
-	  const updateChar = () => {
-		if (currentWordIndex < targetWords.length) {
-		  if (charIndex < targetWords[currentWordIndex].length) {
-			currentTitle = targetWords.slice(0, currentWordIndex).join(" ") + " ";
-			currentTitle += targetWords[currentWordIndex].substring(0, charIndex + 1);
-			setTitle(currentTitle);
-			charIndex++;
-			setTimeout(updateChar, 100); // Adjust speed as needed
-		  } else {
-			currentWordIndex++;
-			charIndex = 0;
-			setTimeout(updateChar, 100);
-		  }
-		}
-	  };
-  
-	  updateChar();
-	};
+		const currentRole = ROLES[roleIndex];
+		const typingSpeed = isDeleting ? 40 : 80;
+
+		const timer = setTimeout(() => {
+			if (!isDeleting) {
+				setDisplayText(currentRole.substring(0, displayText.length + 1));
+				if (displayText.length + 1 === currentRole.length) {
+					setTimeout(() => setIsDeleting(true), 1800);
+				}
+			} else {
+				setDisplayText(currentRole.substring(0, displayText.length - 1));
+				if (displayText.length === 0) {
+					setIsDeleting(false);
+					setRoleIndex((prev) => (prev + 1) % ROLES.length);
+				}
+			}
+		}, typingSpeed);
+
+		return () => clearTimeout(timer);
+	}, [displayText, isDeleting, roleIndex]);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -124,8 +118,17 @@ const Homepage = () => {
 					<div className="homepage-container">
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title" style={{ color: '' }}>
-								ASPIRING <span style={{ color: 'red' }}>{title}</span>
+								<div className="homepage-hero-badge">
+									<span className="badge-pulse"></span>
+									<span>Available for high-impact backend & AI engineering</span>
+								</div>
+
+								<div className="title homepage-title">
+									<span>MOULITHARAN M</span>
+									<div className="homepage-typewriter">
+										<span className="typewriter-text">{displayText}</span>
+										<span className="typewriter-cursor">|</span>
+									</div>
 								</div>
 
 								<div className="subtitle homepage-subtitle">
@@ -137,8 +140,8 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="https://www.appletechsoft.com/wp-content/uploads/2022/02/Full-Stack-vs-MEAN-Stack-vs-MERN-Stack-1.jpg"
-											alt="about"
+											src={`${process.env.PUBLIC_URL}/developer-hero.jpg`}
+											alt="Moulitharan M - Backend Software Engineer"
 											className="homepage-image"
 										/>
 									</div>
